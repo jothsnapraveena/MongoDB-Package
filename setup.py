@@ -3,6 +3,9 @@ from typing import List
 
 HYPEN_E_DOT='-e .'
 
+with open('README.md', 'r', encoding='utf-8') as f:
+    long_description = f.read()  
+
 
 def get_requirement(file_path:str)->List[str]:
     requirements = []
@@ -14,9 +17,7 @@ def get_requirement(file_path:str)->List[str]:
             requirements.remove(HYPEN_E_DOT)
     return requirements
 
-with open('README.md', 'r', encoding='utf-8') as f:
-    long_description = f.read()     
-   
+
 
 __version__ = "0.0.4"
 REPO_NAME = "MongoDB-Package"
